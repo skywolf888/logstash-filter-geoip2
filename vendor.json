@@ -1,10 +1,10 @@
 [
     {
-        "url": "http://logstash.objects.dreamhost.com/maxmind/GeoLiteCity-2013-01-18.dat.gz",
-        "sha1": "15aab9a90ff90c4784b2c48331014d242b86bf82"
+        "url": "https://github.com/maxmind/GeoIP2-java/releases/download/v2.6.0/geoip2-2.6.0-with-dependencies.zip",
+        "sha1": "33eadc43d70346d9cc8a00e16e23df56067e85b2"
     },
     {
-        "url": "http://logstash.objects.dreamhost.com/maxmind/GeoIPASNum-2014-02-12.dat.gz",
-        "sha1": "6f33ca0b31e5f233e36d1f66fbeae36909b58f91"
+        "url": "http://geolite.maxmind.com/download/geoip/database/GeoLite2-City.mmdb.gz",
+        "sha1": "b2d505dd0a78d6afa812284f8099110081f7cfc7"
     }
 ]
