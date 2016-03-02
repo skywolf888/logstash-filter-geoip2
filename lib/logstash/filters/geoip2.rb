@@ -3,14 +3,14 @@ require "logstash/filters/base"
 require "logstash/namespace"
 require "tempfile"
 
-# java jar files reside in ../../../vendor/geoip2-2.2.1-SNAPSHOT/lib/
+# java jar files reside in ../../../vendor/geoip2-*/lib/
 require "java"
 
-require_relative "../../../vendor/geoip2-2.2.1-SNAPSHOT/lib/geoip2-2.2.1-SNAPSHOT.jar"
-require_relative "../../../vendor/geoip2-2.2.1-SNAPSHOT/lib/jackson-databind-2.5.3.jar"
-require_relative "../../../vendor/geoip2-2.2.1-SNAPSHOT/lib/jackson-core-2.5.3.jar"
-require_relative "../../../vendor/geoip2-2.2.1-SNAPSHOT/lib/maxmind-db-1.0.0.jar"
-require_relative "../../../vendor/geoip2-2.2.1-SNAPSHOT/lib/jackson-annotations-2.5.0.jar"
+require_relative "../../../vendor/geoip2-2.6.0/lib/geoip2-2.6.0.jar"
+require_relative "../../../vendor/geoip2-2.6.0/lib/jackson-databind-2.7.0.jar"
+require_relative "../../../vendor/geoip2-2.6.0/lib/jackson-core-2.7.0.jar"
+require_relative "../../../vendor/geoip2-2.6.0/lib/maxmind-db-1.2.0.jar"
+require_relative "../../../vendor/geoip2-2.6.0/lib/jackson-annotations-2.7.0.jar"
 
 java_import "java.net.InetAddress"
 java_import "com.maxmind.geoip2.DatabaseReader"
@@ -83,7 +83,7 @@ class LogStash::Filters::GeoIP2 < LogStash::Filters::Base
   public
   def register
     if @database.nil?
-      @database = ::Dir.glob(::File.join(::File.expand_path("../../../vendor/", ::File.dirname(__FILE__)),"world_city_geoip2.mmdb")).first
+      @database = ::Dir.glob(::File.join(::File.expand_path("../../../vendor/", ::File.dirname(__FILE__)),"GeoLite2-City.mmdb")).first
 
       if !File.exists?(@database)
         raise "You must specify 'database => ...' in your geoip filter (I looked for '#{@database}'"

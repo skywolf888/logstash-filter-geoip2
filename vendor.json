@@ -1,9 +1,5 @@
 [
     {
-        "url": "https://github.com/maxmind/GeoIP2-java/releases/download/v2.6.0/geoip2-2.6.0-with-dependencies.zip",
-        "sha1": "33eadc43d70346d9cc8a00e16e23df56067e85b2"
-    },
-    {
         "url": "http://geolite.maxmind.com/download/geoip/database/GeoLite2-City.mmdb.gz",
         "sha1": "b2d505dd0a78d6afa812284f8099110081f7cfc7"
     }
